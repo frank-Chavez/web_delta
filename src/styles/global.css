@@ -5,6 +5,46 @@ body {
     padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: #000;
-    overflow-x: hidden; /* útil si estás usando transformaciones */
-  }
-  
+    overflow-x: hidden; /* Útil si estás usando transformaciones */
+    cursor: url('/cursor/custom-cursor.png'), auto; /* Cursor por defecto */
+}
+
+a:hover,
+button:hover {
+    cursor: url('/cursor/custom-cursor-2.png'), auto; /* Cursor cuando pasas sobre enlaces y botones */
+}
+
+/* Transición suave para el hover de los botones y enlaces */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Agregar transiciones a los enlaces */
+a {
+    text-decoration: none; /* Para quitar el subrayado predeterminado */
+    color: #fff; /* Color blanco para los enlaces por defecto */
+}
+
+a:hover {
+    color: #f1c40f; /* Cambia el color del enlace al pasar el mouse */
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #333;
+    color: white;
+    border: 2px solid #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f1c40f; /* Color de fondo al pasar el mouse */
+    border-color: #f1c40f; /* Color del borde al pasar el mouse */
+}
+
+/* Evitar desplazamiento innecesario con el uso de overflow */
+html, body {
+    height: 100%;
+}

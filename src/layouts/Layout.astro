@@ -1,59 +1,62 @@
+---
+const { title } = Astro.props;
+---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>Astro Basics</title>
+		<link rel="icon" href="/icons/logo.png">
+		<title>{title || 'Delta Force'}</title>
 	</head>
 	<body>
 		<header class="flex max-w-[1350px] mx-auto px-4 bg-transparent border-b border-white/10 justify-between items-center">
 			<div class="flex gap-3 pt-7 pb-1">
 			  <div>
-				<img src="logo_garena.png" class="w-[90px] sm:w-[110px] md:w-[120px]" />
+				<img src="/img/logo_garena.png" class="w-[90px] sm:w-[110px] md:w-[120px]" />
 			  </div>
 			  <div class="flex justify-center items-center">
 				<div class="h-6 border-l-1 border-white"></div>
 			  </div>			  
 			  <div>
-				<img src="logo_delta.png" class="w-[110px] sm:w-[130px] md:w-[160px]" />
+				<img src="/img/logo_delta.png" class="w-[110px] sm:w-[130px] md:w-[160px]" />
 			  </div>
 			</div>
 
 			<!--redes sociales -->
 			<div class=" gap-3 pt-5 pb-2 hidden md:flex">
 				<a href="https://www.facebook.com/garenadeltaforcelatam" target="_blank" class="bg-white/0 border border-white/50 rounded-3xl backdrop-blur-sm hover:bg-white/10 hover:border-white transition duration-200">
-					<img src="facebook.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
+					<img src="/icons/facebook.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
 				</a>
 				<a href="" target="_blank" class="bg-white/0 border border-white/50 rounded-3xl backdrop-blur-sm hover:bg-white/10 hover:border-white transition duration-200">
-					<img src="twitter_x.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
+					<img src="/icons/twitter_x.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
 				</a>
 				<a href="https://www.instagram.com/garenadeltaforcelatam/" target="_blank" class="bg-white/0 border border-white/50 rounded-3xl backdrop-blur-sm hover:bg-white/10 hover:border-white transition duration-200">
-					<img src="instagram.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
+					<img src="/icons/instagram.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
 				</a>
 				<a href="https://www.youtube.com/@garenadeltaforcelatam" target="_blank" class="bg-white/0 border border-white/50 rounded-3xl backdrop-blur-sm hover:bg-white/10 hover:border-white transition duration-200">
-					<img src="youtube.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
+					<img src="/icons/youtube.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
 				</a>
 				<a href="" target="_blank" class="bg-white/0 border border-white/50 rounded-3xl backdrop-blur-sm hover:bg-white/10 hover:border-white transition duration-200">
-					<img src="discord.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
+					<img src="/icons/discord.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
 				</a>
 				<a href="https://www.tiktok.com/@garenadeltaforcelatam" target="_blank" class="bg-white/0 border border-white/50 rounded-3xl backdrop-blur-sm hover:bg-white/10 hover:border-white transition duration-200">
-					<img src="tiktok.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
+					<img src="/icons/tiktok.svg" alt="Discord" class="w-4 h-4 m-1.5 filter invert">
 				</a>
 			</div>
 		</header>
 
 		<section>
 			<video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-10">
-				<source src="delta.mp4" type="video/mp4">
+				<source src="/videos/delta.mp4" type="video/mp4">
 				Tu navegador no soporta videos en HTML5.
 			  </video>
 			  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover -z-10 block md:hidden">
-				<source src="delta_mobil.mp4" type="video/mp4">
+				<source src="/videos/delta_mobil.mp4" type="video/mp4">
 				Tu navegador no soporta videos en HTML5.
 			  </video>
 		</section>
-		
 		<slot/>
 	</body>
 </html>
